@@ -25,5 +25,6 @@ class ed_user {
   file_line { 'ed_venvwrapper':
     path    => '/home/ed/.bashrc',
     line    => 'source /usr/local/bin/virtualenvwrapper.sh',
-    require => Class['python']
+    require => User['ed'],
+  }
 }
